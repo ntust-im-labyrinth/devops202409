@@ -25,7 +25,7 @@ jobs:
           name: TheDanniCraft/activity-log
           path: actlog
       - name: Run activity-log directly
-        run: ./actlog/src/index.js
+        run: /home/runner/work/devops202409/devops202409/actlog/src/index.js
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
