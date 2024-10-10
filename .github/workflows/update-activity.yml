@@ -27,7 +27,7 @@ jobs:
         working-directory: ./activity-log
         run: |
           ls
-          npm build
+          npm run build
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
