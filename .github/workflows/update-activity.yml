@@ -21,6 +21,7 @@ jobs:
           GITHUB_USERNAME: "raymundlin"
           GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }}
           TARGET_REPOS: '[devops202409]'
+          EVENT_LIMIT: '100'
       # - name: Set up Node
       #   uses: actions/setup-node@v4
       #   with:
