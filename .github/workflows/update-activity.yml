@@ -28,6 +28,11 @@ jobs:
         env:
           INPUT_GITHUB_USERNAME: "raymundlin"
           INPUT_GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
+          INPUT_EVENT_LIMIT: '5'
+          INPUT_OUTPUT_STYLE: MARKDOWN
+          INPUT_IGNORE_EVENTS: '[]'
+          INPUT_README_PATH: ../README.md
+          INPUT_COMMIT_MESSAGE: Update README.md without using external action
         run: |
           npm i -g @vercel/ncc
           npm i @actions/github
