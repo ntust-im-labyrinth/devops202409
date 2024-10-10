@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Update activity log
-        uses: raymundlin/activity-log@v1
+        uses: raymundlin/activity-log@v2
         with:
           GITHUB_USERNAME: "raymundlin"
           GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }}
