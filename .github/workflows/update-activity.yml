@@ -28,7 +28,7 @@ jobs:
         env:
           INPUT_GITHUB_USERNAME: "raymundlin"
           INPUT_GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
-          INPUT_EVENT_LIMIT: '5'
+          INPUT_EVENT_LIMIT: '100'
           INPUT_OUTPUT_STYLE: MARKDOWN
           INPUT_IGNORE_EVENTS: '[]'
           INPUT_README_PATH: ../README.md
