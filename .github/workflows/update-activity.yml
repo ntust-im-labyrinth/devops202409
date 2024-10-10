@@ -23,8 +23,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           name: TheDanniCraft/activity-log
+          path: actlog
       - name: Run activity-log directly
-        run: activity-log/src/index.js
+        run: ./actlog/src/index.js
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
