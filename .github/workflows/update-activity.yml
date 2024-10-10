@@ -25,7 +25,9 @@ jobs:
           git clone https://github.com/TheDanniCraft/activity-log.git
       - name: Run activity-log directly
         working-directory: ./activity-log
-        run: npm run
+        run: |
+          npm i -g @vercel/ncc
+          ncc run src/index.js --license licenses.txt
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
