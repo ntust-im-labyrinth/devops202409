@@ -1,6 +1,9 @@
 # .github/workflows/update-activity.yml:
 
 name: Update GitHub Activity
+env:
+  GITHUB_USERNAME: "raymundlin"
+  GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
 
 on:
 #  schedule:
@@ -29,8 +32,3 @@ jobs:
           npm i -g @vercel/ncc
           npm i @actions/github
           ncc run src/index.js --license licenses.txt
-      # - name: Update GitHub Activity
-      #   uses: TheDanniCraft/activity-log@v1
-      #   with:
-      #     GITHUB_USERNAME: "raymundlin"
-      #     GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
