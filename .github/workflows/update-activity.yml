@@ -27,7 +27,7 @@ jobs:
         working-directory: ./activity-log
         run: |
           npm i -g @vercel/ncc
-          npm i -g @actions/core
+          npm i -g @actions/github
           ncc run src/index.js --license licenses.txt
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
