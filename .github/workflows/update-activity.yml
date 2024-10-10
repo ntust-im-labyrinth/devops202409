@@ -20,12 +20,14 @@ jobs:
         with:
           node-version: 20
       - name: Clone activity-log
-        uses: actions/checkout@v4
-        with:
-          name: TheDanniCraft/activity-log
-          path: actlog
+        run: |
+          git config --global url.https://github.com/.insteadOf git://github.com/
+          git clone https://github.com/TheDanniCraft/activity-log.git
       - name: Run activity-log directly
-        run: ls /home/runner/work/devops202409/devops202409/actlog
+        run: |
+          ls /home/runner/work/devops202409/devops202409/
+          ls /home/runner/work/devops202409/devops202409/activity-log
+          node /home/runner/work/devops202409/devops202409/activity-log/src/index.js
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
