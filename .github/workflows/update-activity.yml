@@ -16,11 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Update activity log
-        uses: raymundlin/activity-log@v7
+        uses: raymundlin/activity-log@v8
         with:
           GITHUB_USERNAME: "raymundlin"
           GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }}
-          TARGET_REPOS: '[devops202409]'
+          TARGET_REPOS: '[raymundlin/devops202409]'
           EVENT_LIMIT: '100'
       # - name: Set up Node
       #   uses: actions/setup-node@v4
