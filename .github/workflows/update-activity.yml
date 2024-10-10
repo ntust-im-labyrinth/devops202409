@@ -25,9 +25,7 @@ jobs:
           git clone https://github.com/TheDanniCraft/activity-log.git
       - name: Run activity-log directly
         working-directory: ./activity-log
-        run: |
-          ls
-          npm run build
+        run: npm run
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
