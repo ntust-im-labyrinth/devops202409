@@ -23,7 +23,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           name: TheDanniCraft/activity-log
-          ref: refs/heads/release
       - name: Run activity-log directly
         run: activity-log/src/index.js
       # - name: Update GitHub Activity
