@@ -26,8 +26,8 @@ jobs:
       - name: Run activity-log directly
         working-directory: ./activity-log
         env:
-          GITHUB_USERNAME: "raymundlin"
-          GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
+          INPUT_GITHUB_USERNAME: "raymundlin"
+          INPUT_GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
         run: |
           npm i -g @vercel/ncc
           npm i @actions/github
