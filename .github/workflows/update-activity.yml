@@ -15,25 +15,31 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Update activity log
+        uses: raymundlin/activity-log@main
         with:
-          node-version: 20
-      - name: Clone activity-log
-        run: |
-          git config --global url.https://github.com/.insteadOf git://github.com/
-          git clone https://github.com/TheDanniCraft/activity-log.git
-      - name: Run activity-log directly
-        working-directory: ./activity-log
-        env:
-          INPUT_GITHUB_USERNAME: "raymundlin"
-          INPUT_GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
-          INPUT_EVENT_LIMIT: '100'
-          INPUT_OUTPUT_STYLE: MARKDOWN
-          INPUT_IGNORE_EVENTS: '[]'
-          INPUT_README_PATH: ../README.md
-          INPUT_COMMIT_MESSAGE: Update README.md without using external action
-        run: |
-          npm i -g @vercel/ncc
-          npm i @actions/github
-          ncc run src/index.js --license licenses.txt
+          GITHUB_USERNAME: "raymundlin"
+          GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }}
+          TARGET_REPOS: '[devops202409]'
+      # - name: Set up Node
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      # - name: Clone activity-log
+      #   run: |
+      #     git config --global url.https://github.com/.insteadOf git://github.com/
+      #     git clone https://github.com/TheDanniCraft/activity-log.git
+      # - name: Run activity-log directly
+      #   working-directory: ./activity-log
+      #   env:
+      #     INPUT_GITHUB_USERNAME: "raymundlin"
+      #     INPUT_GITHUB_TOKEN: ${{ secrets.ACTIONSECRET2024 }} # Ensure this matches the secret name in repository settings
+      #     INPUT_EVENT_LIMIT: '100'
+      #     INPUT_OUTPUT_STYLE: MARKDOWN
+      #     INPUT_IGNORE_EVENTS: '[]'
+      #     INPUT_README_PATH: ../README.md
+      #     INPUT_COMMIT_MESSAGE: Update README.md without using external action
+      #   run: |
+      #     npm i -g @vercel/ncc
+      #     npm i @actions/github
+      #     ncc run src/index.js --license licenses.txt
