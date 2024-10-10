@@ -24,10 +24,10 @@ jobs:
           git config --global url.https://github.com/.insteadOf git://github.com/
           git clone https://github.com/TheDanniCraft/activity-log.git
       - name: Run activity-log directly
+        working-directory: ./activity-log
         run: |
-          ls /home/runner/work/devops202409/devops202409/
-          ls /home/runner/work/devops202409/devops202409/activity-log
-          node /home/runner/work/devops202409/devops202409/activity-log/src/index.js
+          ls
+          npm build
       # - name: Update GitHub Activity
       #   uses: TheDanniCraft/activity-log@v1
       #   with:
